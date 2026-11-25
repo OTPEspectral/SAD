@@ -92,7 +92,7 @@ Sugerencias de lo que se toca en el bloque D (SSH, Nginx):
   HTTP-6710 · Add HTTPS to nginx virtual hosts for enhanced protection of sensitive data and privacy
   SSH-7408 · Consider hardening SSH configuration · AllowTcpForwarding (set YES to NO)
   SSH-7408 · Consider hardening SSH configuration · ClientAliveCountMax (set 3 to 2)
-  SSH-7408 · Consider hardening SSH configuration · LogLevel (set INFO to VERBOSE)
+#  SSH-7408 · Consider hardening SSH configuration · LogLevel (set INFO to VERBOSE)
   SSH-7408 · Consider hardening SSH configuration · MaxSessions (set 10 to 2)
   SSH-7408 · Consider hardening SSH configuration · Port (set 22 to )
   SSH-7408 · Consider hardening SSH configuration · TCPKeepAlive (set YES to NO)
