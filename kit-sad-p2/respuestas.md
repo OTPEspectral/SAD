@@ -68,8 +68,34 @@ qué hacen falta los dos?
 
 Nota del análisis **antes** de bastionar (D0):
 
->
+> Nota del servidor (hardening index): 58 / 100
+Sugerencias de lo que se toca en el bloque D (SSH, Nginx):
+  HTTP-6710 · Add HTTPS to nginx virtual hosts for enhanced protection of sensitive data and privacy
+  SSH-7408 · Consider hardening SSH configuration · AllowTcpForwarding (set YES to NO)
+  SSH-7408 · Consider hardening SSH configuration · ClientAliveCountMax (set 3 to 2)
+  SSH-7408 · Consider hardening SSH configuration · LogLevel (set INFO to VERBOSE)
+  SSH-7408 · Consider hardening SSH configuration · MaxAuthTries (set 6 to 3)
+  SSH-7408 · Consider hardening SSH configuration · MaxSessions (set 10 to 2)
+  SSH-7408 · Consider hardening SSH configuration · PermitRootLogin (set YES to (FORCED-COMMANDS-ONLY|NO|PROHIBIT-PASSWORD|WITHOUT-PASSWORD))
+  SSH-7408 · Consider hardening SSH configuration · Port (set 22 to )
+  SSH-7408 · Consider hardening SSH configuration · TCPKeepAlive (set YES to NO)
+  SSH-7408 · Consider hardening SSH configuration · X11Forwarding (set YES to NO)
+  SSH-7408 · Consider hardening SSH configuration · AllowAgentForwarding (set YES to NO)
+(en total: 51 sugerencias; todas en /var/log/lynis-report.dat)
+
 
 Nota **después** (D4). ¿Por qué no llega a 100? ¿Significa que el servidor sigue inseguro? Comenta un aviso que siga saliendo.
 
->
+> ▶ El inspector revisa el servidor de reservas (tarda un minuto)…
+Nota del servidor (hardening index): 62 / 100
+Sugerencias de lo que se toca en el bloque D (SSH, Nginx):
+  HTTP-6710 · Add HTTPS to nginx virtual hosts for enhanced protection of sensitive data and privacy
+  SSH-7408 · Consider hardening SSH configuration · AllowTcpForwarding (set YES to NO)
+  SSH-7408 · Consider hardening SSH configuration · ClientAliveCountMax (set 3 to 2)
+  SSH-7408 · Consider hardening SSH configuration · LogLevel (set INFO to VERBOSE)
+  SSH-7408 · Consider hardening SSH configuration · MaxSessions (set 10 to 2)
+  SSH-7408 · Consider hardening SSH configuration · Port (set 22 to )
+  SSH-7408 · Consider hardening SSH configuration · TCPKeepAlive (set YES to NO)
+  SSH-7408 · Consider hardening SSH configuration · AllowAgentForwarding (set YES to NO)
+(en total: 48 sugerencias; todas en /var/log/lynis-report.dat)
+
