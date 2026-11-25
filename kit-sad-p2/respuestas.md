@@ -28,7 +28,8 @@ Nmap done: 1 IP address (1 host up) scanned in 1.33 seconds
 
 Después de `./lab.sh comprobar`, mira `./lab.sh ver`. ¿Cuántos paquetes lleva el contador de A6? ¿Quién los ha mandado?
 
->
+> iifname "dmz" oifname "lan" counter packets 12 bytes 720 drop comment "A6 Todo lo que entre de DMZ y vaya a LAN, se dropea" # handle 18
+Lleva 12 paquetes, enviados por 
 
 ## Bloque B · La prueba del cifrado
 
