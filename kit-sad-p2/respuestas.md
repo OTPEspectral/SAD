@@ -37,12 +37,24 @@ En el firewall (`./lab.sh fw`): `tcpdump -ni wan host 198.51.100.62 -c 6`. Mient
 (`./lab.sh comercial`) hace `curl http://172.16.10.20:8080`. Pega lo que sale en el firewall:
 
 ```text
-(pega aquí la salida de tcpdump)
+root@fw:/# tcpdump -ni wan host 198.51.100.62 -c 6
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on wan, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+13:31:54.785912 IP 198.51.100.62.46321 > 198.51.100.254.51820: UDP, length 96
+13:31:54.786021 IP 198.51.100.254.51820 > 198.51.100.62.46321: UDP, length 96
+13:31:54.786088 IP 198.51.100.62.46321 > 198.51.100.254.51820: UDP, length 96
+13:31:54.786228 IP 198.51.100.62.46321 > 198.51.100.254.51820: UDP, length 176
+13:31:54.786298 IP 198.51.100.254.51820 > 198.51.100.62.46321: UDP, length 96
+13:31:54.786377 IP 198.51.100.254.51820 > 198.51.100.62.46321: UDP, length 304
+6 packets captured
+10 packets received by filter
+0 packets dropped by kernel
+
 ```
 
 En dos líneas: ¿qué se ve por la calle y qué NO se ve?
 
->
+> Se ven los paquetes cifrados pero no se ve el contenido de ellos, puertos ni IP's.
 
 ## Bloque C · Para la defensa (C4)
 
