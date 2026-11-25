@@ -54,14 +54,15 @@ listening on wan, link-type EN10MB (Ethernet), snapshot length 262144 bytes
 
 En dos líneas: ¿qué se ve por la calle y qué NO se ve?
 
-> Se ven los paquetes cifrados pero no se ve el contenido de ellos, puertos ni IP's.
+> Se ven los paquetes cifrados y encapsulados, pero no se ve el contenido de la página, IP ni puertos.
 
 ## Bloque C · Para la defensa (C4)
 
 Del **mismo ataque** (la inyección a la web): ¿qué ve el vigilante de la red (el IDS) y qué ve el portero de la web? ¿Por
 qué hacen falta los dos?
 
->
+> Suricata ve el tráfico que llega, pero solo alerta, sin llegar a bloquear conexiones. El WAF recibe el tráfico redirigido
+  y analiza su contenido, para evitar posibles ataque de SQLi, pudiendo bloquear si llega a la puntuación requerida.
 
 ## Bloque D · La nota del servidor (D0 y D4)
 
